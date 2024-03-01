@@ -153,7 +153,7 @@
                     </li>
                     <li>Verify Docker Installation
                         <ul>
-                            <li>Open a terminal and run the following command to verify that Docker is installed and running using:<b>docker --version</b></li>
+                            <li>Open a terminal and run the following command to verify that Docker is installed and running using: <b><span style="color: black;">docker --version</span></b></li>
                             <li>You should see the Docker version information printed to the terminal if Docker is installed correctly.</li>
                         </ul> 
                     </li>
@@ -164,6 +164,50 @@
                         </ul> 
                     </li>
                   </ol>
+                  <h3>Linux Instructions</h3>
+                  <p>
+                    To set up Docker on a Linux computer, you can follow these steps. The exact commands may vary slightly depending on your Linux distribution, but the overall process should be similar</p>
+                  <ol type="1">
+                      <li>Update Package Index
+                          <ul>
+                              <li>Open your terminal and update the package index to ensure you have the latest information about available packages using: <b><span style="color: black;">sudo apt update</span></b></li>
+                          </ul> 
+                      </li>
+                      <li>Install Required Packages
+                          <ul>
+                              <li>Install packages to allow apt to use a repository over HTTPS and to add Docker's official GPG key using: <br/><b><span style="color: black;">sudo apt install apt-transport-https ca-certificates curl software-properties-common</span></b>
+                            </li>
+                              <li>Drag the Docker icon to your Applications folder.</li>
+                          </ul> 
+                      </li>
+                      <li>Add Docker Repository
+                          <ul>
+                              <li>Add Docker's official GPG key using: <b><span style="color: black;">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span></b></li>
+                              <li>Add the Docker repository to your system's list of sources using: <br/><b><span style="color: black;">sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"</span></b></li>
+                          </ul> 
+                      </li>
+                      <li>Update Package Index Again
+                          <ul>
+                            <li>Update the package index once more to ensure you have access to Docker packages using: <b><span style="color: black;">sudo apt update</span></b></li>
+                            </ul> 
+                      </li>
+                      <li>Install Docker CE (Community Edition):
+                          <ul>
+                              <li>Install the latest version of Docker CE using: <b><span style="color: black;">sudo apt install docker-ce</span></b></li>
+                          </ul> 
+                      </li>
+                      <li>Verify Docker Installation
+                          <ul>
+                              <li>Check that Docker CE is installed correctly by running the following command, which should output the installed version of Docker using: <br/><b><span style="color: black;">docker --version</span></b></li>
+                          </ul> 
+                      </li>
+                      <li>Start Docker Service
+                        <ul>
+                            <li>Start the Docker service if it's not already running using: <b><span style="color: black;">sudo systemctl start docker</span></b></li>
+                            <li>Enable Docker to start on boot using: <b><span style="color: black;">sudo systemctl enable docker</span></b></li>
+                        </ul> 
+                    </li>
+                    </ol>
             </div>
         </section>
 
