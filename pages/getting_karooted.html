@@ -52,10 +52,10 @@
                 <p class="masthead-subheading font-weight-light mb-0">Python - Docker - Kubernetes - Tango</p>
             </div>
         </header>
-        <!-- Team Section-->
+        <!-- Python Section-->
         <section class="page-section" id="python">
             <div class="container">
-                <!-- About Section Heading-->
+                <!-- Python Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Python</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -63,25 +63,113 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                <h3>Mac Instructions</h3>
+                <ol type="1">
+                    <li>Check if Python is already installed by opening a terminal and type <b>python3 --version or python --version</b> to check if Python is already installed. If it is, you will see the version number. If not, you will see an error message.</li><br/>
+                    <li>Install Homebrew (optional but recommended): Homebrew is a package manager for macOS that makes it easy to install and manage software packages. You can install it by running the following command in a terminal:<br />
+                        <b>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</b><br/>
+                    </li><br/>
+                    <li>Install Python using Homebrew: If you have Homebrew installed, you can install Python by running the following command in a terminal:<br/>
+                        <b>brew install python</b>
+                    </li><br/>
+                    <li>Verify the installation: After the installation is complete, you can verify that Python was installed correctly by running the command below. You should see the version number of the Python interpreter:<br/>
+                        <b>python3 --version or python --version in a terminal.</b>
+                    </li>
+                  </ol>
+                  <h3>Linux Instructions</h3>
+                  <ol type="1">
+                      <li>Check if Python is already installed by opening a terminal and type <b>which python3</b> to check if Python is already installed. If it is, you will see the version number. If not, you will see an error message.</li><br/>
+                      <li>To install Python on a Linux machine, you can use various package managers provided by different distributions. Here's how you can do it for some popular distributions:<br/>
+                        <ul>
+                            <li>Ubuntu/Debian
+                                <ul>
+                                    <li><b>sudo apt update</b></li>
+                                    <li><b>sudo apt install python3</b></li>
+                                </ul>
+                            </li>
+                            <li>Fedora
+                                <ul>
+                                    <li><b>sudo dnf install python3</b></li>
+                                </ul>
+                            </li>
+                            <li>CentOS
+                                <ul>
+                                    <li><b>sudo yum install python3</b></li>
+                                </ul>
+                            </li>
+                            <li>Arch Linux
+                                <ul>
+                                    <li><b>sudo pacman -S python</b></li>
+                                </ul>
+                            </li>
+                            <li>OpenSUSE
+                                <ul>
+                                    <li><b>sudo zypper install python3</b></li>
+                                </ul>
+                            </li>
+                        </ul>  
+                     </li>
+                      <li>Verify the installation was successful using the same command in 1.<br/>
+                      </li>
+                    </ol> 
             </div>
         </section>
-        <!-- About Section-->
+        <!-- Docker Section-->
         <section class="page-section bg-primary text-white mb-0" id="docker">
             <div class="container">
-                <!-- About Section Heading-->
+                <!-- Docker Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-white">Docker</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
-                </div>  
+                </div>
+                <h3>Mac Instructions</h3>
+                <ol type="1">
+                    <li>Download Docker Desktop for Mac
+                        <ul>
+                            <li>Go to the Docker Hub website: <b><a href="https://docs.docker.com/desktop/install/mac-install/">Docker Hub</a></b></li>
+                            <li>Click on the appropriate download for your computer</li>
+                        </ul> 
+                    </li>
+                    <li>Install Docker Desktop
+                        <ul>
+                            <li>Open the downloaded .dmg file</li>
+                            <li>Drag the Docker icon to your Applications folder.</li>
+                        </ul> 
+                    </li>
+                    <li>Run Docker Desktop
+                        <ul>
+                            <li>Open Docker from your Applications folder.</li>
+                            <li>You may be prompted to grant permission to install additional components. Follow the on-screen instructions to complete the installation.</li>
+                        </ul> 
+                    </li>
+                    <li>Start Docker Desktop
+                        <ul>
+                            <li>Open Docker from your Applications folder.</li>
+                            <li>Docker Desktop will start and display a Docker icon in your menu bar.</li>
+                        </ul> 
+                    </li>
+                    <li>Verify Docker Installation
+                        <ul>
+                            <li>Open a terminal and run the following command to verify that Docker is installed and running using:<b>docker --version</b></li>
+                            <li>You should see the Docker version information printed to the terminal if Docker is installed correctly.</li>
+                        </ul> 
+                    </li>
+                    <li>Run Docker Containers (Optional)
+                        <ul>
+                            <li>You can now start using Docker to run containers. Try running a simple container to test the installation by running: <b>docker run hello-world</b></li>
+                            <li>Docker will download and run the "hello-world" container, and you should see a message indicating that Docker is working correctly.</li>
+                        </ul> 
+                    </li>
+                  </ol>
             </div>
         </section>
 
         <section class="page-section" id="kubernetes">
             <div class="container">
-                <!-- About Section Heading-->
+                <!-- Docker Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Kubernetes</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
@@ -89,6 +177,7 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
+                
             </div>
         </section>
 
