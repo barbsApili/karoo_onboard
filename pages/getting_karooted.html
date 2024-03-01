@@ -30,7 +30,8 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#python">Python</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#docker">Docker</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#kubernetes">Kubernetes</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#tango">Tango</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#repo">Repos</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#test">Setup Test</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,7 +50,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Python - Docker - Kubernetes - Tango</p>
+                <p class="masthead-subheading font-weight-light mb-0">Python - Docker - Kubernetes - Repos</p>
             </div>
         </header>
         <!-- Python Section-->
@@ -221,14 +222,59 @@
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                
+                <h3>Mac Instructions</h3>
+                <ol type="1">
+                    <li>Assuming you have now installed Homebrew we can instal Kubernetes (K9s) immediately using: <b>brew install k9s</b> </li>
+                    <li>Install Python using Homebrew: If you have Homebrew installed, you can install Python by running the following command in a terminal:<br/>
+                        <b>brew install python</b>
+                    </li>
+                    <li>Verify Installation: After the installation is complete, you can verify that K9s is installed by running using: <br/>
+                        <b>k9s version</b>
+                    </li>
+                    <li>To run k9s simply just type in <b>k9s</b> in yout terminal.</li>
+                  </ol>
+                  <h3>Linux Instructions</h3>
+                  <p>
+                    To install K9s on a Linux machine, you can use the following steps. These steps assume you are using a Debian-based distribution (e.g., Ubuntu). If you are using a different distribution, the package manager commands may vary.</p>
+                  <ol type="1">
+                    <li> Download the K9s Binary
+                        <ul>
+                            <li>Go to the K9s GitHub releases page: K9s Releases</li>
+                            <li>Download the appropriate binary for your architecture. For Linux, you'll likely want the k9s_Linux_x86_64.tar.gz file, but make sure to check for the latest release and download the correct file.</li>
+                        </ul> 
+                    </li>
+                      <li>Extract the Binary
+                        <ul>
+                            <li>Open a terminal and navigate to the directory where you downloaded the tar.gz file.</li>
+                            <li>Extract the contents of the file using the following command (replace k9s_VERSION.tar.gz with the actual name of the file you downloaded) using :<b>tar -xzvf k9s_VERSION.tar.gz</b></li>
+                        </ul>
+                      </il>
+                      <li>Move the Binary
+                        <ul>
+                            <li>Move the extracted binary to a directory in your PATH, such as /usr/local/bin, to make it executable system-wide using: sudo mv k9s /usr/local/bin/</li>
+                        </ul>
+                      </li>
+                      <li>Make the Binary Executable
+                        <ul>
+                            <li>Make the binary executable by running using: sudo chmod +x /usr/local/bin/k9s</li>
+                        </ul>
+                      </li>
+                      <li>Verify Installation
+                        <ul>
+                            <li>Verify that K9s is installed by running using: k9s version</li>
+                        </ul>
+                      </li>
+                      <li>To run k9s simply just type in <b>k9s</b> in yout terminal.</li>
+
+                    </ol> 
+            </div>
             </div>
         </section>
 
-        <section class="page-section bg-primary text-white mb-0" id="tango">
+        <section class="page-section bg-primary text-white mb-0" id="repos">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Tango</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white">Repos</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
@@ -239,10 +285,11 @@
                 
             </div>
         </section>
-        <section class="page-section" id="summary">
+
+        <section class="page-section" id="test">
             <div class="container">
                 <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Summary</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Setup Test</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
