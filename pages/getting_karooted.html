@@ -282,12 +282,22 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- About Section Content-->
-                <p>There are quite a few ways to set up you laptop but the method described here make
-                     use of the .sh file found <a>here</a>. The file basically houses all the links to the docker 
+                <p>There are quite a few ways to set up you laptop but the method described here makes
+                     use of the docker_images.sh file found <a href="https://github.com/barbsApili/karoo_onboard/blob/main/docker_images.sh">here</a>. The file basically houses all the links to the docker 
                      images you'll need to get up and running. By running this file you will invoke a series of
                     downloads - grab some coffee this come take some time depending on you internet connection and machine</p>
 
                     <h3>Instructions for Mac</h3>
+                    <ol type="1">
+                        <li>Assuming you have now installed Homebrew we can instal Kubernetes (K9s) immediately using: <b>brew install k9s</b> </li>
+                        <li>Install Python using Homebrew: If you have Homebrew installed, you can install Python by running the following command in a terminal:<br/>
+                            <b>brew install python</b>
+                        </li>
+                        <li>Verify Installation: After the installation is complete, you can verify that K9s is installed by running using: <br/>
+                            <b>k9s version</b>
+                        </li>
+                        <li>To run k9s simply just type in <b>k9s</b> in yout terminal.</li>
+                      </ol>
                     <h3>Instruction for Linux</h3>
                 
             </div>
