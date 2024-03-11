@@ -33,7 +33,6 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#kubernetes">Kubernetes</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#minikube">Minikube</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#repos">Repos</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#test">Setup Test</a></li>
                     </ul>
                 </div>
             </div>
@@ -353,37 +352,19 @@
                 <p>There are quite a few ways to set up you laptop but the method described here makes
                      use of the docker_images.sh file found <a href="https://github.com/barbsApili/karoo_onboard/blob/main/docker_images.sh" target="_blank"><span style="color: black;">here</span></a>. The file basically houses all the links to the docker 
                      images you'll need to get up and running. By running this file you will invoke a series of
-                    downloads - grab some coffee this come take some time depending on you internet connection and machine</p>
+                    downloads - grab some coffee this come take some time depending on you internet connection and machine. FYI: Make sure that your minikube has been started and that you have run the <b>"eval"</b> command</p>
 
                     <h3>Instructions for Linux and Mac</h3>
                     <ol type="1">
                         <li>Clone the .sh file or copy and paste the contents of the .sh file into a text file and save it as a .sh file. You can call it another name should you wish too</li>
                         <li>Navigate the the directory where the file is and make sure the .sh file is executable by running: <b><span style="color: black;">chmod +x ${the_name_of_the_script}.sh</span></b> in your terminal</li>
                         <li>Run the file using: <b><span style="color: black;">sudo. /${the_name_of_the_script}.sh</span></b> just in case you need to run the script with admin permissions</li>
-                        <li>Sit back and relax</li>
+                        <li>Run the following command: <b><span style="color: black;">docker images</span></b> and see the different images that were downloaded. You should see an image as the one shown below: </br></br>
+                            <img src="../assets/img/portfolio/docker_images.png" alt="docker_images" style="width: 700px;"></br></br>
+                            You're done for now. Next we will take you through the our repos and you'll get a chance to run a few commands and see how the repos all connect.
+                        </li>
                       </ol>
-                    </div>
                 </section>
-
-        <section class="page-section bg-primary text-white mb-0" id="test">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Setup Test</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <p>Now that you're done with all of the above lets do a few simple tests to check that we guided you well.Notes somethings make look slightly different on your computer but what you should see will also be explained.</p>
-                <ol type="1">
-                    <li>Step 1: Make sure you docker is on. </li>
-                    <li>Step 2: Start minikube</li>
-                    <li>Step 3: Run the file using: <b><span style="color: black;">sudo. /${the_name_of_the_script}.sh</span></b> just in case you need to run the script with admin permissions</li>
-                    <li>Sit back and relax</li>
-                  </ol>
-            </div>
-        </section>
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
