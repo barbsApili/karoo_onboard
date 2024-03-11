@@ -27,9 +27,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="../index.html">Home</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#python">Python</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#docker">Docker</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#kubernetes">Kubernetes</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#minikube">Minikube</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#repos">Repos</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#test">Setup Test</a></li>
                     </ul>
@@ -224,7 +226,7 @@
                 </div>
                 <h3>Mac Instructions</h3>
                 <ol type="1">
-                    <li>Assuming you have now installed Homebrew we can instal Kubernetes (K9s) immediately using: <b>brew install k9s</b> </li>
+                    <li>Assuming you have now installed Homebrew we can install Kubernetes (K9s) immediately using: <b>brew install k9s</b> </li>
                     <li>Install Python using Homebrew: If you have Homebrew installed, you can install Python by running the following command in a terminal:<br/>
                         <b>brew install python</b>
                     </li>
@@ -248,7 +250,7 @@
                             <li>Open a terminal and navigate to the directory where you downloaded the tar.gz file.</li>
                             <li>Extract the contents of the file using the following command (replace k9s_VERSION.tar.gz with the actual name of the file you downloaded) using :<b>tar -xzvf k9s_VERSION.tar.gz</b></li>
                         </ul>
-                      </il>
+                      </li>
                       <li>Move the Binary
                         <ul>
                             <li>Move the extracted binary to a directory in your PATH, such as /usr/local/bin, to make it executable system-wide using: sudo mv k9s /usr/local/bin/</li>
@@ -271,12 +273,78 @@
             </div>
         </section>
 
-        <section class="page-section bg-primary text-white mb-0" id="repos">
+        <section class="page-section bg-primary text-white mb-0" id="minikube">
             <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">Repos</h2>
+                <!-- Docker Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Minikube</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <p>Minikube is a tool that allows you to run a single-node Kubernetes cluster locally on your machine. It's designed for development and testing purposes,
+                    providing an easy way to set up and manage a Kubernetes environment on your local machine.
+                </p>
+                <p>There are different configurations that one could use when setting up Minikube but so you may need to tweak a few values such as memory etc.
+                </p>
+                <h3>Mac Instructions</h3>
+                <ol type="1">
+                    <li>Assuming you have now installed Homebrew we can install Minikube (K9s) immediately using: <span style="color: black;"><b>brew install minikube</b></span></li>
+                    <li>You can start minikube by simply typing in this command: <span style="color: black;"><b>minikube start</b></span> but, in order to have more power over you can rather use </br><span style="color: black;"><b>minikube start --memory 8192 --cpus=4 --disk-size=80g </b></span>.
+                    </li>
+                    <li>Verify Installation: After the installation is complete, you can verify that K9s is installed by running using: <br/>
+                        <span style="color: black;"><b>minikube status</b></span></br>
+                        You will see an output similiar to the image below:</br>
+                        <img src="../assets/img/portfolio/minikube_status.png" alt="minikube_status" style="width: 200px;">
+                    </li>
+                    <li>Now type in the following command: <span style="color: black;"><b>eval $(minikube -p minikube docker-env)</b></span> in yout terminal. This command is used to set up your local Docker environment to use the Docker daemon running inside the Minikube virtual machine. This is necessary
+                        when you want to build Docker images directly inside Minikube's Docker daemon.</li>
+                    <li>Now type in the status command, found in (3): <span style="color: black;"><b>minikube status</b></span>. You should now see the following output depicted below:</br>
+                        <img src="../assets/img/portfolio/minikube_status_eval.png" alt="minikube_status_eval" style="width: 200px;">
+                    </li>
+                    <li>In order to interact with Minikube you need to install kubectl which is a command-line tool:<span style="color: black;"><b>brew install kubectl</b></span>.</li>
+                    <li>In order to stop minikube, when you're done using it, you'll have to type in the following command: <span style="color: black;"><b>minikube stop</b></span>.</li>
+                    <li>Also note that after you have run the "start" command with personalised figures (2) you wont have to run that long command each time you want to start Minikube just run: <span style="color: black;"><b>minikube start</b></span> your configurations are saved.</li>
+                  </ol>
+                  <h3>Linux Instructions</h3>
+                  <ol type="1">
+                    <li> If you haven't already installed kubectl, which is the command-line tool for Kubernetes, you can install it using the following commands
+                        <span style="color: black;"><b>sudo apt-get update && sudo apt-get install -y apt-transport-https gnupg2
+                        curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+                        echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+                        sudo apt-get update
+                        sudo apt-get install -y kubectl</b>
+                        </span>
+                    </li>
+                    <li>Minikube requires a hypervisor to run the Kubernetes cluster. You can use VirtualBox as the hypervisor by installing it using the following command:
+                        <span style="color: black;"><b>sudo apt-get install virtualbox virtualbox-ext-pack</b></span>
+                    </li>
+                    <li>Download and install the Minikube binary using the following command: </br><span style="color: black;"><b>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+                        sudo install minikube-linux-amd64 /usr/local/bin/minikube
+                        </b></span>
+                    </li>
+                    <li>Start Minikube using:<span style="color: black;"><b>minikube start</b></span></li>
+                    <li> Verify that Minikube is running using the following command <span style="color: black;"><b>minikube status</b></span>. You should see the following output:</br>
+                        <img src="../assets/img/portfolio/minikube_status.png" alt="minikube_status" style="width: 200px;">  
+                    </li>
+                    <li>Now type in the following command: <span style="color: black;"><b>eval $(minikube -p minikube docker-env)</b></span> in yout terminal. This command is used to set up your local Docker environment to use the Docker daemon running inside the Minikube virtual machine. This is necessary
+                        when you want to build Docker images directly inside Minikube's Docker daemon.
+                    </li>
+                    <li>Now type in the status command, found in (3): <span style="color: black;"><b>minikube status</b></span>. You should now see the following output depicted below:</br>
+                        <img src="../assets/img/portfolio/minikube_status_eval.png" alt="minikube_status_eval" style="width: 200px;">
+                    </li>
+                </ol> 
+            </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="repos">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Repos</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom ">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
@@ -297,17 +365,23 @@
                     </div>
                 </section>
 
-        <section class="page-section" id="test">
+        <section class="page-section bg-primary text-white mb-0" id="test">
             <div class="container">
                 <!-- About Section Heading-->
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Setup Test</h2>
                 <!-- Icon Divider-->
-                <div class="divider-custom">
+                <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
                 <p>Now that you're done with all of the above lets do a few simple tests to check that we guided you well.Notes somethings make look slightly different on your computer but what you should see will also be explained.</p>
+                <ol type="1">
+                    <li>Step 1: Make sure you docker is on. </li>
+                    <li>Step 2: Start minikube</li>
+                    <li>Step 3: Run the file using: <b><span style="color: black;">sudo. /${the_name_of_the_script}.sh</span></b> just in case you need to run the script with admin permissions</li>
+                    <li>Sit back and relax</li>
+                  </ol>
             </div>
         </section>
         <!-- Footer-->
